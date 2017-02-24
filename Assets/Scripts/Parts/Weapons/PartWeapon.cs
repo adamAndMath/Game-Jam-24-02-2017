@@ -1,8 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public abstract class PartWeapon : MonoBehaviour
 {
-    public abstract void Update(Player player);
+    public abstract void UpdateWeapon(Player player);
 }
