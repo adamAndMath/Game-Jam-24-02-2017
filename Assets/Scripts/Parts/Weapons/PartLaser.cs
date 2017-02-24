@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Linq;
+using UnityEngine;
 
 public class PartLaser : PartWeapon
 {
@@ -11,20 +12,34 @@ public class PartLaser : PartWeapon
     {
         bool button = player.InputWeapon;
 
+        laser.SetActive(button);
+
         if (button)
         {
-            RaycastHit2D hit = Physics2D.CircleCast(laser.transform.position, width, transform.up, maxLength);
+            float distance = CastLaser(player);
 
-            laser.transform.localScale = new Vector3(1, hit ? hit.distance + width : maxLength, 1);
+            laser.transform.localScale = new Vector3(1, distance, 1);
+        }
+    }
 
-            if (hit)
+    private float CastLaser(Player player)
+    {
+        foreach (var hit in Physics2D.CircleCastAll(laser.transform.position, width, transform.up, maxLength))
+        {
+            Player other = hit.collider.GetComponent<Player>();
+
+            if (!other)
             {
-                Player other = hit.collider.GetComponent<Player>();
-                if (other) other.Damage(damage);
+                return hit.distance + width;
+            }
+
+            if (other != player)
+            {
+                other.Damage(damage * Time.deltaTime);
+                return hit.distance + width;
             }
         }
 
-        laser.SetActive(button);
-        
+        return maxLength;
     }
 }
