@@ -20,7 +20,7 @@ public class PartLaser : PartWeapon
             if (hit)
             {
                 Player other = hit.collider.GetComponent<Player>();
-                if (other) other.Damage(damage);
+                if (other) other.Damage(damage*Time.deltaTime);
             }
         }
 
