@@ -5,18 +5,24 @@ public class Player : MonoBehaviour
 {
     public string horizontal;
     public string vertical;
+    public string weaponButton;
     public PartMove partMove;
+    public PartWeapon weapon;
 
-    private Rigidbody2D rigid;
+    public Rigidbody2D rigid;
 
     void Start()
     {
         rigid = GetComponent<Rigidbody2D>();
     }
 
+    void Update()
+    {
+        if (weapon) weapon.Update(this);
+    }
+
     void FixedUpdate()
     {
-        rigid.drag = partMove.drag;
-        rigid.AddForce(partMove.acceleration * new Vector2(Input.GetAxis(horizontal), Input.GetAxis(vertical)), ForceMode2D.Force);
+        partMove.MoveFixed(this);
     }
 }
