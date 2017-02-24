@@ -88,9 +88,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49b25a3297320374eb3eac278cbb828b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  horizontal: Horizontal
-  vertical: Vertical
-  weaponButton: Fire1
+  id: 0
+  horizontal: -Horizontal
+  vertical: -Vertical
+  weaponButton: -Weapon
   partMove: {fileID: 114334141967687518, guid: 608289ad431dc4d4c9342b27ab593968, type: 2}
   weapon: {fileID: 0}
   rigid: {fileID: 0}

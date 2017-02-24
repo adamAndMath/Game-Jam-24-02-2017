@@ -7,7 +7,7 @@ public class PartMove : MonoBehaviour
 
     public virtual void MoveFixed(Player player)
     {
-        Vector2 movement = new Vector2(Input.GetAxisRaw(player.horizontal), Input.GetAxisRaw(player.vertical));
+        Vector2 movement = player.InputMove;
 
         if (movement.sqrMagnitude < 0.1F) return;
 

@@ -8,7 +8,7 @@ public class PartLaser : PartWeapon
 
     public override void Update(Player player)
     {
-        bool button = Input.GetButton(player.weaponButton);
+        bool button = player.InputWeapon;
 
         if (button)
         {
