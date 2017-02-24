@@ -122,7 +122,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   horizontal: Horizontal
   vertical: Vertical
-  partMove: {fileID: 11400000, guid: 14af2635af3f0b441bb2a489c1dfc785, type: 2}
+  partMove: {fileID: 114334141967687518, guid: 608289ad431dc4d4c9342b27ab593968, type: 2}
 --- !u!50 &24410554
 Rigidbody2D:
   serializedVersion: 4
