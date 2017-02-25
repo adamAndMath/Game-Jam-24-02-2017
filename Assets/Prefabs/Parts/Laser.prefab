@@ -113,7 +113,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1666363223595092}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.02, z: 0}
+  m_LocalPosition: {x: 0, y: 0.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4026562502677696}
@@ -141,7 +141,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1287343254222802}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.04, z: 0}
+  m_LocalPosition: {x: 0, y: -0.12, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4916946643702304}
@@ -255,6 +255,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pickUp: {fileID: 114818537612871586, guid: dffe2184f4790dd49b3c92f57ed42cb9, type: 2}
   damage: 1
+  energy: 0.1
   width: 0.12
   maxLength: 20
   laser: {fileID: 1666363223595092}
@@ -266,7 +267,7 @@ ParticleSystem:
   m_GameObject: {fileID: 1117279225245780}
   serializedVersion: 5
   lengthInSec: 5
-  simulationSpeed: 1
+  speed: 1
   looping: 1
   prewarm: 0
   playOnAwake: 1
