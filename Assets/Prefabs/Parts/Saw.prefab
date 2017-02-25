@@ -227,8 +227,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pickUp: {fileID: 114625313406560040, guid: 802654ed338f82745b271aa2bb619ea3, type: 2}
-  damage: 30
-  energy: 1
+  damage: 6
+  energy: 0.1
   mesh: {fileID: 58889161221500340}
 --- !u!212 &212065952581784420
 SpriteRenderer:
