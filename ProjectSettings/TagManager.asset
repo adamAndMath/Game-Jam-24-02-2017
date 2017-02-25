@@ -39,14 +39,14 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Default
-    uniqueID: 0
-    locked: 0
   - name: Floor
     uniqueID: 2952775017
     locked: 0
   - name: Tiles
     uniqueID: 1906741503
+    locked: 0
+  - name: Default
+    uniqueID: 0
     locked: 0
   - name: Parts
     uniqueID: 3544690745
