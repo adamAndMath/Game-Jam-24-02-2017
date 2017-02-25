@@ -18,7 +18,7 @@ public class PartWheel : PartMove
         Vector2 movement = player.InputMove;
         player.rigid.drag = drag;
 
-        anim.SetBool("IsMoving", movement.sqrMagnitude < 0.01F);
+        anim.SetBool("IsMoving", movement.sqrMagnitude > 0.01F);
         if (movement.sqrMagnitude < 0.01F) return;
 
         float delta = UpdateRotation(player, movement);
