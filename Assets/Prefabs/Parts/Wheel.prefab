@@ -73,7 +73,8 @@ MonoBehaviour:
   pickUp: {fileID: 0}
   drag: 4
   acceleration: 20
-  rotationSpeed: 200
+  rotationSpeed: 100
+  allowedDelta: 5
 --- !u!212 &212497500203205272
 SpriteRenderer:
   m_ObjectHideFlags: 1

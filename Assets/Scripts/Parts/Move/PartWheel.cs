@@ -3,6 +3,7 @@
 public class PartWheel : PartMove
 {
     public float rotationSpeed;
+    public float allowedDelta;
 
     public override void MoveFixed(Player player)
     {
@@ -11,12 +12,13 @@ public class PartWheel : PartMove
 
         if (movement.sqrMagnitude < 0.01F) return;
 
-        UpdateRotation(player, movement);
+        float delta = UpdateRotation(player, movement);
 
-        player.rigid.AddForce(acceleration * player.transform.up * movement.magnitude, ForceMode2D.Force);
+        if (Mathf.Abs(delta) < allowedDelta)
+            player.rigid.AddForce(acceleration * player.transform.up * movement.magnitude, ForceMode2D.Force);
     }
 
-    private void UpdateRotation(Player player, Vector2 movement)
+    private float UpdateRotation(Player player, Vector2 movement)
     {
         float angle = Mathf.Rad2Deg*Mathf.Atan2(-movement.x, movement.y);
         float rot = player.transform.rotation.eulerAngles.z;
@@ -31,5 +33,6 @@ public class PartWheel : PartMove
             rot = angle;
 
         player.transform.rotation = Quaternion.Euler(0, 0, rot);
+        return delta;
     }
 }
