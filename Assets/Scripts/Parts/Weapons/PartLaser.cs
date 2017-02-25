@@ -3,11 +3,11 @@
 public class PartLaser : PartWeapon
 {
     public float damage = 0.1F;
+    public float energy = 0.1F;
     public float width = 0.5F;
     public float maxLength = 20;
     public GameObject laser;
     private AudioSource audio;
-    private bool audioIsOn;
 
     public void Start()
     {
@@ -16,27 +16,22 @@ public class PartLaser : PartWeapon
 
     public override void UpdateWeapon(Player player)
     {
-        bool button = player.InputWeapon;
+        bool button = player.InputWeapon && player.energy > 0;
 
         laser.SetActive(button);
 
         if (button)
         {
-            if (!audioIsOn)
-            {
+            if (!audio.isPlaying)
                 audio.Play();
-                audioIsOn = true;
-            }
 
             float distance = CastLaser(player);
 
+            player.energy = Mathf.Max(0, player.energy - energy*Time.deltaTime);
             laser.transform.localScale = new Vector3(1, distance, 1);
         }
-        else if (!button && audioIsOn)
-        {
+        else if (audio.isPlaying)
             audio.Stop();
-            audioIsOn = false;
-        }
     }
 
     private float CastLaser(Player player)
