@@ -103,6 +103,7 @@ public class Player : MonoBehaviour, IDamageable
 
     private void RotationWeapon(Vector2 movement)
     {
+        movement = transform.worldToLocalMatrix*movement;
         float angle = Mathf.Rad2Deg * Mathf.Atan2(-movement.x, movement.y);
         float rot = weapon.transform.localRotation.eulerAngles.z;
 
