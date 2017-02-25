@@ -36,7 +36,7 @@ public class PartLaser : PartWeapon
 
     private float CastLaser(Player player)
     {
-        foreach (var hit in Physics2D.CircleCastAll(laser.transform.position, width, transform.up, maxLength, player.weaponIgnore))
+        foreach (var hit in Physics2D.CircleCastAll(laser.transform.position, width, transform.up, maxLength))
         {
             if (((1 << hit.collider.gameObject.layer) & player.weaponIgnore) != 0)
                 continue;
