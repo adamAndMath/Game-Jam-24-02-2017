@@ -42,6 +42,12 @@ public class HealthBar : MonoBehaviour
 
     void Update()
     {
+        if (player == null)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
         back.anchoredPosition = offset + (Vector2)Camera.main.WorldToScreenPoint(player.transform.position);
         back.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, scale * Max);
         front.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, scale * Value);
