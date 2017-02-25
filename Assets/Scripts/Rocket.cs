@@ -12,6 +12,7 @@ public class Rocket : MonoBehaviour, IDamageable
     void Start()
     {
         col = GetComponent<Collider2D>();
+        Physics2D.IgnoreCollision(col, player.col);
     }
 
     void FixedUpdate()
