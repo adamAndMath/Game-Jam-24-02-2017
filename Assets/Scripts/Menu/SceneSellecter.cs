@@ -4,7 +4,6 @@ using UnityEngine.UI;
 
 public class SceneSellecter : MonoBehaviour
 {
-    public int nextScene;
     public float timeToNext;
     public float fadeTime;
     public Image image;
@@ -34,6 +33,6 @@ public class SceneSellecter : MonoBehaviour
 
         time = timeToNext;
         DontDestroyOnLoad(gameObject);
-        SceneManager.LoadScene(nextScene);
+        SceneManager.LoadScene((SceneManager.GetActiveScene().buildIndex + 1) % SceneManager.sceneCount);
     }
 }

@@ -136,7 +136,7 @@ MonoBehaviour:
   id: 0
   maxHp: 100
   maxEnergy: 50
-  rotationSpeed: 360
+  rotationSpeed: 720
   horizontal: -Horizontal
   vertical: -Vertical
   rotateHorizontal: -RotateX
