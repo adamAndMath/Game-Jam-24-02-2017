@@ -21,10 +21,7 @@ public class PartWheel : PartMove
         player.rigid.drag = drag;
 
         anim.SetBool("IsMoving", movement.sqrMagnitude > 0.01F);
-
-       ChildAnimator.SetBool("OtherWheelIsMoving", movement.sqrMagnitude > 0.01F);
         
-            
         if (movement.sqrMagnitude < 0.01F) return;
 
         float delta = UpdateRotation(player, movement);
