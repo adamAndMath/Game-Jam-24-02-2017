@@ -35,7 +35,7 @@ public class Player : MonoBehaviour, IDamageable
         get { return partMove; }
         set
         {
-            if (partMove) Destroy(partMove);
+            if (partMove) Destroy(partMove.gameObject);
             partMove = value;
             if (value) value.transform.SetParent(transform, false);
         }

@@ -78,7 +78,7 @@ MonoBehaviour:
   player: {fileID: 0}
   back: {fileID: 224061637113227162}
   front: {fileID: 224612662545014618}
-  offset: {x: 0, y: 60}
+  offset: {x: 0, y: 47}
   scale: 4
 --- !u!114 &114517520588810130
 MonoBehaviour:
