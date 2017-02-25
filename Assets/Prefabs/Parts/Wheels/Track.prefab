@@ -154,8 +154,8 @@ MonoBehaviour:
   pickUp: {fileID: 114929793303645820, guid: 65b21ab89082ab047896035e9465465d, type: 2}
   drag: 100
   acceleration: 400
-  rotationSpeed: 140
-  allowedDelta: 180
+  rotationSpeed: 170
+  allowedDelta: 160
 --- !u!212 &212278290132833306
 SpriteRenderer:
   m_ObjectHideFlags: 1

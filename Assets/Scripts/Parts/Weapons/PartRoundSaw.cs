@@ -39,7 +39,10 @@ public class PartRoundSaw : PartWeapon
         }
         else
         {
+            if (particle = null)
+            {
             particle.Stop();
+            }
         }
     }
 }
