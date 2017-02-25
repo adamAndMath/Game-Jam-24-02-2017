@@ -55,7 +55,7 @@ MonoBehaviour:
   ArmingTime: 3
   player: {fileID: 114532577579521662, guid: 5ae494bf02410d84ea632e7320895493, type: 2}
   ExplosionRadius: 3
-  explosion: {fileID: 114032366316020450, guid: 050fd5a16886df240a6e0a0be5214eb9,
+  explosion: {fileID: 114445476989826270, guid: 050fd5a16886df240a6e0a0be5214eb9,
     type: 2}
 --- !u!212 &212777678323636376
 SpriteRenderer:
