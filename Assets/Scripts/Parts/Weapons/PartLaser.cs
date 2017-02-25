@@ -43,15 +43,13 @@ public class PartLaser : PartWeapon
     {
         foreach (var hit in Physics2D.CircleCastAll(laser.transform.position, width, transform.up, maxLength))
         {
-            Player other = hit.collider.GetComponent<Player>();
+            if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Pick Up"))
+                continue;
 
-            if (!other)
-            {
-                if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Pick Up"))
-                    continue;
+            IDamageable other = hit.collider.GetComponent<IDamageable>();
 
+            if (other == null)
                 return hit.distance + width;
-            }
 
             if (other != player)
             {

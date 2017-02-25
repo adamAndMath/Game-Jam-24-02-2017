@@ -2,7 +2,7 @@
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
-public class Player : MonoBehaviour
+public class Player : MonoBehaviour, IDamageable
 {
     public int id;
     public float maxHp;
@@ -32,9 +32,9 @@ public class Player : MonoBehaviour
         get { return partMove; }
         set
         {
-            Destroy(partMove);
+            if (partMove) Destroy(partMove);
             partMove = value;
-            value.transform.SetParent(transform, false);
+            if (value) value.transform.SetParent(transform, false);
         }
     }
 
@@ -43,9 +43,9 @@ public class Player : MonoBehaviour
         get { return weapon; }
         set
         {
-            Destroy(weapon.gameObject);
+            if (weapon) Destroy(weapon.gameObject);
             weapon = value;
-            value.transform.SetParent(transform, false);
+            if (value) value.transform.SetParent(transform, false);
         }
     }
 
