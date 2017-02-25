@@ -135,4 +135,5 @@ MonoBehaviour:
   ExplosionSound: {fileID: 82525160792958660}
   damage: 1
   explotionRadius: 2
-  time: 0
+  force: 100
+  time: 4

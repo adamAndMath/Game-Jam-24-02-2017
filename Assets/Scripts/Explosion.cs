@@ -5,6 +5,7 @@ public class Explosion : MonoBehaviour
     public AudioSource ExplosionSound;
     public float damage;
     public float explotionRadius;
+    public float force;
     public float time;
 
 	void Start ()
@@ -18,6 +19,13 @@ public class Explosion : MonoBehaviour
 	        if (hit != null)
 	        {
 	            hit.Damage(damage);
+	        }
+
+	        Rigidbody2D rigid = col.GetComponent<Rigidbody2D>();
+
+	        if (rigid)
+	        {
+	            rigid.AddForceAtPosition((col.transform.position - transform.position).normalized * force, transform.position, ForceMode2D.Impulse);
 	        }
 	    }
 
