@@ -86,7 +86,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rate: 3
-  chance: 0.9
+  chance: 1
   objects:
   - {fileID: 1094176084151040, guid: d65e6e1a50c65f3488ed4029c4a10aab, type: 2}
   - {fileID: 1514678259458006, guid: dffe2184f4790dd49b3c92f57ed42cb9, type: 2}
@@ -94,11 +94,7 @@ MonoBehaviour:
   - {fileID: 1786896848470696, guid: 802654ed338f82745b271aa2bb619ea3, type: 2}
   - {fileID: 1073147530940838, guid: 5b8491c7b8db118429ecd2b36dd10deb, type: 2}
   - {fileID: 1410103282829472, guid: 65b21ab89082ab047896035e9465465d, type: 2}
-  - {fileID: 1906012763049280, guid: 2ecb26178addb9f4e872078c1b09d4f3, type: 2}
-  - {fileID: 1906012763049280, guid: 2ecb26178addb9f4e872078c1b09d4f3, type: 2}
-  - {fileID: 1906012763049280, guid: 2ecb26178addb9f4e872078c1b09d4f3, type: 2}
-  - {fileID: 1906012763049280, guid: 2ecb26178addb9f4e872078c1b09d4f3, type: 2}
-  - {fileID: 1906012763049280, guid: 2ecb26178addb9f4e872078c1b09d4f3, type: 2}
+  - {fileID: 1711019651614870, guid: f6442a9a1881fd24596b35c8da2318a9, type: 2}
   - {fileID: 1906012763049280, guid: 2ecb26178addb9f4e872078c1b09d4f3, type: 2}
 --- !u!212 &212255856098868164
 SpriteRenderer:
