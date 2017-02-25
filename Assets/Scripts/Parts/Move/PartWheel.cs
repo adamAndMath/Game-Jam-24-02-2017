@@ -1,15 +1,24 @@
 ﻿using UnityEngine;
 
+[RequireComponent(typeof(Animator))]
 public class PartWheel : PartMove
 {
     public float rotationSpeed;
     public float allowedDelta;
+
+    private Animator anim;
+
+    void Start()
+    {
+        anim = GetComponent<Animator>();
+    }
 
     public override void MoveFixed(Player player)
     {
         Vector2 movement = player.InputMove;
         player.rigid.drag = drag;
 
+        anim.SetBool("IsMoving", movement.sqrMagnitude < 0.01F);
         if (movement.sqrMagnitude < 0.01F) return;
 
         float delta = UpdateRotation(player, movement);
