@@ -7,10 +7,12 @@ public class PartWheel : PartMove
     public float allowedDelta;
 
     private Animator anim;
+    private Animator ChildAnimator;
 
     void Start()
     {
         anim = GetComponent<Animator>();
+        ChildAnimator = GetComponentInChildren<Animator>();
     }
 
     public override void MoveFixed(Player player)
@@ -19,6 +21,10 @@ public class PartWheel : PartMove
         player.rigid.drag = drag;
 
         anim.SetBool("IsMoving", movement.sqrMagnitude > 0.01F);
+
+       ChildAnimator.SetBool("OtherWheelIsMoving", movement.sqrMagnitude > 0.01F);
+        
+            
         if (movement.sqrMagnitude < 0.01F) return;
 
         float delta = UpdateRotation(player, movement);
