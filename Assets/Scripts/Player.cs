@@ -29,7 +29,7 @@ public class Player : MonoBehaviour, IDamageable
     public Rigidbody2D rigid;
 
     public CircleCollider2D col;
-
+    public Explosion explosion;
     public PartMove PartMove
     {
         get { return partMove; }
@@ -130,7 +130,8 @@ public class Player : MonoBehaviour, IDamageable
 
             if (hp <= 0)
             {
-                Destroy(gameObject);
+            Instantiate(explosion, transform.position, Quaternion.identity);
+            Destroy(gameObject);
             }
     }
 }
