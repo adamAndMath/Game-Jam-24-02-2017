@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class HoleManager : MonoBehaviour {
-    private float StickThreshold = 1.2F;
+    private float StickThreshold = .4F;
     public RuntimeAnimatorController controller;
 	// Use this for initialization
 	void Start ()
@@ -19,11 +19,8 @@ public class HoleManager : MonoBehaviour {
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        Debug.Log("Why is this happening?");
         if (collision.gameObject.tag == "Hole")
         {
-            Debug.Log(Vector2.Distance(gameObject.transform.position, collision.gameObject.transform.position));
-            Debug.Log("Why is this happening?");
             if (Vector2.Distance(gameObject.transform.position, collision.gameObject.transform.position) < StickThreshold)
             {
                 Animator anim = GetComponent<Animator>();
@@ -32,7 +29,10 @@ public class HoleManager : MonoBehaviour {
                     anim = gameObject.AddComponent<Animator>();
 
                 anim.runtimeAnimatorController = controller;
-                gameObject.GetComponent<Player>().enabled = false;
+                Player player = gameObject.GetComponent<Player>();
+
+                if (player) player.enabled = false;
+
                 gameObject.transform.position = collision.gameObject.transform.position;
             }
         }

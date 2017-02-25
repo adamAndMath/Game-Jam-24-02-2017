@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 114882185867389498}
   - component: {fileID: 58347867291255664}
   - component: {fileID: 50141198890935698}
+  - component: {fileID: 114546766648829172}
   m_Layer: 8
   m_Name: Pick Up Rocket
   m_TagString: Untagged
@@ -77,6 +78,18 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.18
+--- !u!114 &114546766648829172
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1424286694057082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c65a055e0d66bdc448267b1c46b57024, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 9100000, guid: d026f8ec7fa524f44b0d6fe7ab5e77ec, type: 2}
 --- !u!114 &114882185867389498
 MonoBehaviour:
   m_ObjectHideFlags: 1

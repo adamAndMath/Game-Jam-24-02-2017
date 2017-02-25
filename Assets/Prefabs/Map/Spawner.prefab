@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212255856098868164}
   - component: {fileID: 61688985403873016}
   - component: {fileID: 114537342843051916}
+  - component: {fileID: 95394296556318514}
   m_Layer: 10
   m_Name: Spawner
   m_TagString: Untagged
@@ -36,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1205667589670002}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 2.36, y: 3.84, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -56,6 +57,23 @@ BoxCollider2D:
   m_Offset: {x: 0.48, y: 0.08}
   serializedVersion: 2
   m_Size: {x: 1.76, y: 0.8}
+--- !u!95 &95394296556318514
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1205667589670002}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e5b808b24fb96ea4aa0756c19ce17314, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114537342843051916
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -67,13 +85,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fc40b1ded641af4baf0ffa78cffed52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rate: 1
-  chance: 1
+  rate: 3
+  chance: 0.9
   objects:
   - {fileID: 1094176084151040, guid: d65e6e1a50c65f3488ed4029c4a10aab, type: 2}
   - {fileID: 1514678259458006, guid: dffe2184f4790dd49b3c92f57ed42cb9, type: 2}
   - {fileID: 1424286694057082, guid: f4a0f32265c81fa43ae5d3e56abf556a, type: 2}
   - {fileID: 1786896848470696, guid: 802654ed338f82745b271aa2bb619ea3, type: 2}
+  - {fileID: 1586153059492740, guid: 5b8491c7b8db118429ecd2b36dd10deb, type: 2}
+  - {fileID: 1906012763049280, guid: 2ecb26178addb9f4e872078c1b09d4f3, type: 2}
+  - {fileID: 1906012763049280, guid: 2ecb26178addb9f4e872078c1b09d4f3, type: 2}
+  - {fileID: 1906012763049280, guid: 2ecb26178addb9f4e872078c1b09d4f3, type: 2}
+  - {fileID: 1906012763049280, guid: 2ecb26178addb9f4e872078c1b09d4f3, type: 2}
+  - {fileID: 1906012763049280, guid: 2ecb26178addb9f4e872078c1b09d4f3, type: 2}
+  - {fileID: 1906012763049280, guid: 2ecb26178addb9f4e872078c1b09d4f3, type: 2}
 --- !u!212 &212255856098868164
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -103,8 +128,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -650024599
+  m_SortingOrder: 20
   m_Sprite: {fileID: 21300000, guid: 61e28c4e164807f4b8a432c3430e6b60, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

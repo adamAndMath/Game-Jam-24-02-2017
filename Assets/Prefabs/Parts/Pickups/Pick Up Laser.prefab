@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 114818537612871586}
   - component: {fileID: 58535057471017520}
   - component: {fileID: 50754904364577842}
+  - component: {fileID: 114205202698106192}
   m_Layer: 8
   m_Name: Pick Up Laser
   m_TagString: Untagged
@@ -77,6 +78,18 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.1
+--- !u!114 &114205202698106192
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1514678259458006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c65a055e0d66bdc448267b1c46b57024, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 9100000, guid: d026f8ec7fa524f44b0d6fe7ab5e77ec, type: 2}
 --- !u!114 &114818537612871586
 MonoBehaviour:
   m_ObjectHideFlags: 1

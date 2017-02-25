@@ -36,9 +36,9 @@ public class PartLaser : PartWeapon
 
     private float CastLaser(Player player)
     {
-        foreach (var hit in Physics2D.CircleCastAll(laser.transform.position, width, transform.up, maxLength))
+        foreach (var hit in Physics2D.CircleCastAll(laser.transform.position, width, transform.up, maxLength, player.weaponIgnore))
         {
-            if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Pick Up"))
+            if (((1 << hit.collider.gameObject.layer) & player.weaponIgnore) != 0)
                 continue;
 
             IDamageable other = hit.collider.GetComponent<IDamageable>();
