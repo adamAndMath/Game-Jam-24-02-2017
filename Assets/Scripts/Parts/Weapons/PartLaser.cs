@@ -7,6 +7,7 @@ public class PartLaser : PartWeapon
     public float maxLength = 20;
     public GameObject laser;
     private AudioSource audio;
+    private bool audioIsOn;
 
     public void Start()
     {
@@ -21,15 +22,20 @@ public class PartLaser : PartWeapon
 
         if (button)
         {
-            audio.Play();
+            if (!audioIsOn)
+            {
+                audio.Play();
+                audioIsOn = true;
+            }
 
             float distance = CastLaser(player);
 
             laser.transform.localScale = new Vector3(1, distance, 1);
         }
-        else
+        else if (!button && audioIsOn)
         {
             audio.Stop();
+            audioIsOn = false;
         }
     }
 

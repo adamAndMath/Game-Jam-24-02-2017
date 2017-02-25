@@ -173,9 +173,9 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 3e39f2a98981c4b41a9cbc0b92f1e380, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
+  m_Volume: 0.04
+  m_Pitch: 0.6
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -254,7 +254,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pickUp: {fileID: 114818537612871586, guid: dffe2184f4790dd49b3c92f57ed42cb9, type: 2}
-  damage: 0.1
+  damage: 1
   width: 0.12
   maxLength: 20
   laser: {fileID: 1666363223595092}
