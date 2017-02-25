@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PartLaser : PartWeapon
 {
@@ -30,6 +29,9 @@ public class PartLaser : PartWeapon
 
             if (!other)
             {
+                if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Pick Up"))
+                    continue;
+
                 return hit.distance + width;
             }
 

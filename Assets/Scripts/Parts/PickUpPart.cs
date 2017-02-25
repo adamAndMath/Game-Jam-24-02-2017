@@ -19,6 +19,6 @@ public class PickUpPart : MonoBehaviour
             player.PartWeapon = Instantiate((PartWeapon) part);
         else throw new Exception();
 
-        Destroy(this);
+        Destroy(gameObject);
     }
 }
