@@ -6,9 +6,12 @@ public class Player : MonoBehaviour
 {
     public int id;
     public float maxHp;
+    public float rotationSpeed = 360;
     [Space]
     public string horizontal;
     public string vertical;
+    public string rotateHorizontal;
+    public string rotateVertical;
     public string weaponButton;
     public string pickUp;
     [Space]
@@ -54,6 +57,14 @@ public class Player : MonoBehaviour
         }
     }
 
+    public Vector2 InputRotate
+    {
+        get
+        {
+            return new Vector2(Input.GetAxisRaw(id + rotateHorizontal), Input.GetAxisRaw(id + rotateVertical));
+        }
+    }
+
     public bool InputWeapon { get { return Input.GetButton(id + weaponButton); } }
     public bool InputPickUp { get { return Input.GetButtonDown(id + pickUp); } }
 
@@ -79,7 +90,28 @@ public class Player : MonoBehaviour
             }
         }
 
-        if (weapon) weapon.UpdateWeapon(this);
+        if (weapon)
+        {
+            RotationWeapon(InputRotate);
+            weapon.UpdateWeapon(this);
+        }
+    }
+
+    private void RotationWeapon(Vector2 movement)
+    {
+        float angle = Mathf.Rad2Deg * Mathf.Atan2(-movement.x, movement.y);
+        float rot = weapon.transform.localRotation.eulerAngles.z;
+
+        float delta = angle - rot;
+        if (delta < -180) delta += 360;
+        if (delta > 180) delta -= 360;
+
+        if (Mathf.Abs(delta) > rotationSpeed * Time.fixedDeltaTime)
+            rot += Mathf.Sign(delta) * rotationSpeed * Time.fixedDeltaTime;
+        else
+            rot = angle;
+
+        weapon.transform.localRotation = Quaternion.Euler(0, 0, rot);
     }
 
     void FixedUpdate()
