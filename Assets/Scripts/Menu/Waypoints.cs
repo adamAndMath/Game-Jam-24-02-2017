@@ -12,12 +12,14 @@ public class Waypoints : MonoBehaviour
     public List<PartMove> partMoves;
     public List<PartWeapon> partWeapons;
     public HealthBar[] bars;
+    public GameObject[] countDown;
     public float time = 5;
 
     private bool start;
     private List<int> avalable;
     private List<Player> players = new List<Player>();
     private float timer;
+    private int id = -1;
 
     void Awake()
     {
@@ -29,7 +31,7 @@ public class Waypoints : MonoBehaviour
             avalable.Add(i);
     }
 
-    public void Start()
+    public void StartGame()
     {
         start = true;
         Update();
@@ -49,12 +51,21 @@ public class Waypoints : MonoBehaviour
         timer -= Time.deltaTime;
         if (timer <= 0)
         {
-            foreach (Player player in players)
-            {
-                player.enabled = true;
-            }
+            timer = time;
+            if (id >= 0)
+                countDown[id].SetActive(false);
 
-            Destroy(gameObject);
+            if (++id < countDown.Length)
+                countDown[id].SetActive(true);
+            else
+            {
+                foreach (Player player in players)
+                {
+                    player.enabled = true;
+                }
+
+                Destroy(gameObject);
+            }
         }
     }
 
@@ -62,8 +73,8 @@ public class Waypoints : MonoBehaviour
     {
         int posID = Random.Range(0, points.Count);
         int colorID = Random.Range(0, colors.Count);
-        int moveID = Random.Range(0, points.Count);
-        int weaponID = Random.Range(0, colors.Count);
+        int moveID = Random.Range(0, partMoves.Count);
+        int weaponID = Random.Range(0, partWeapons.Count);
 
         Player player = Instantiate(playerPrefab);
         player.enabled = false;

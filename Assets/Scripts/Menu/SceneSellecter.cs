@@ -21,6 +21,7 @@ public class SceneSellecter : MonoBehaviour
     {
         if (time > fadeTime && Input.GetKeyDown(KeyCode.JoystickButton0))
         {
+            Waypoints.Instance.StartGame();
             Destroy(gameObject);
             return;
         }
