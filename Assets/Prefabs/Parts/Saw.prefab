@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 95502870970195954}
   - component: {fileID: 82135439507015646}
   m_Layer: 0
-  m_Name: Saw Holder
+  m_Name: Saw
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
