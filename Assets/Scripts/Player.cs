@@ -6,6 +6,7 @@ public class Player : MonoBehaviour, IDamageable
 {
     public int id;
     public float maxHp;
+    public float maxEnergy;
     public float rotationSpeed = 360;
     [Space]
     public string horizontal;
@@ -21,6 +22,7 @@ public class Player : MonoBehaviour, IDamageable
     private PartWeapon weapon;
 
     public float hp;
+    public float energy;
 
     [System.NonSerialized]
     public Rigidbody2D rigid;
@@ -73,6 +75,7 @@ public class Player : MonoBehaviour, IDamageable
         rigid = GetComponent<Rigidbody2D>();
         col = GetComponent<CircleCollider2D>();
         hp = maxHp;
+        energy = maxEnergy;
     }
 
     void Update()
