@@ -254,8 +254,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pickUp: {fileID: 114818537612871586, guid: dffe2184f4790dd49b3c92f57ed42cb9, type: 2}
-  damage: 1
-  energy: 0.1
+  damage: 5
+  energy: 3
   width: 0.12
   maxLength: 20
   laser: {fileID: 1666363223595092}

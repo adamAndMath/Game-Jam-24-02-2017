@@ -502,8 +502,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 1
-  maxHp: 5
-  maxEnergy: 5
+  maxHp: 100
+  maxEnergy: 50
   rotationSpeed: 360
   horizontal: -Horizontal
   vertical: -Vertical
