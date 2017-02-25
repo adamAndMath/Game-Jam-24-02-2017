@@ -90,7 +90,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   speed: 5
-  explotion: {fileID: 114032366316020450, guid: 050fd5a16886df240a6e0a0be5214eb9,
+  explotion: {fileID: 114445476989826270, guid: 050fd5a16886df240a6e0a0be5214eb9,
     type: 2}
 --- !u!212 &212142677903242510
 SpriteRenderer:
