@@ -17,10 +17,12 @@ public class PartRoundSaw : PartWeapon
         
         mesh.gameObject.SetActive(button);
 
-        animator.SetBool("WeaponActive", true);
+        
        
         if (button)
         {
+            animator.SetBool("WeaponActive", true);
+
             Collider2D[] hits = Physics2D.OverlapCircleAll((Vector2) mesh.transform.position + mesh.offset, mesh.radius);
 
             foreach (Collider2D hit in hits)
@@ -30,6 +32,10 @@ public class PartRoundSaw : PartWeapon
                 if (damageable != null && damageable != player)
                     damageable.Damage(damage * Time.deltaTime);
             }
+        }
+        else
+        {
+            animator.SetBool("WeaponActive", false);
         }
     }
 }
