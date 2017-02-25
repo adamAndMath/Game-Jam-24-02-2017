@@ -30,6 +30,7 @@ public class Player : MonoBehaviour, IDamageable
 
     public CircleCollider2D col;
     public Explosion explosion;
+
     public PartMove PartMove
     {
         get { return partMove; }
@@ -81,6 +82,12 @@ public class Player : MonoBehaviour, IDamageable
 
     void Update()
     {
+        if (weapon)
+        {
+            RotationWeapon(InputRotate);
+            weapon.UpdateWeapon(this);
+        }
+
         if (InputPickUp)
         {
             PickUpPart[] pickUps = Physics2D.OverlapCircleAll((Vector2) transform.position + col.offset, col.radius)
@@ -92,12 +99,6 @@ public class Player : MonoBehaviour, IDamageable
             {
                 pickUps[Random.Range(0, pickUps.Length)].PickUp(this);
             }
-        }
-
-        if (weapon)
-        {
-            RotationWeapon(InputRotate);
-            weapon.UpdateWeapon(this);
         }
     }
 
@@ -121,7 +122,7 @@ public class Player : MonoBehaviour, IDamageable
 
     void FixedUpdate()
     {
-            partMove.MoveFixed(this);
+        partMove.MoveFixed(this);
     }
 
     public void Damage(float damage)

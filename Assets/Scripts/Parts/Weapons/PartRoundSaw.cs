@@ -8,7 +8,7 @@ public class PartRoundSaw : PartWeapon
     private Animator animator;
     private ParticleSystem particle;
 
-    public void Awake()
+    void Awake()
     {
         animator = GetComponent<Animator>();
         particle = GetComponentInChildren<ParticleSystem>();
@@ -39,7 +39,10 @@ public class PartRoundSaw : PartWeapon
         }
         else
         {
+            if (particle = null)
+            {
             particle.Stop();
+            }
         }
     }
 }
