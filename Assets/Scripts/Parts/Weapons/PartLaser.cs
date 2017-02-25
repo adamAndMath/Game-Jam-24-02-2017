@@ -6,6 +6,12 @@ public class PartLaser : PartWeapon
     public float width = 0.5F;
     public float maxLength = 20;
     public GameObject laser;
+    private AudioSource audio;
+
+    public void Start()
+    {
+        audio = GetComponent<AudioSource>();
+    }
 
     public override void UpdateWeapon(Player player)
     {
@@ -15,9 +21,15 @@ public class PartLaser : PartWeapon
 
         if (button)
         {
+            audio.Play();
+
             float distance = CastLaser(player);
 
             laser.transform.localScale = new Vector3(1, distance, 1);
+        }
+        else
+        {
+            audio.Stop();
         }
     }
 
