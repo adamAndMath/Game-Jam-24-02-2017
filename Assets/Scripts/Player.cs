@@ -116,16 +116,16 @@ public class Player : MonoBehaviour, IDamageable
 
     void FixedUpdate()
     {
-        partMove.MoveFixed(this);
+            partMove.MoveFixed(this);
     }
 
     public void Damage(float damage)
     {
-        hp -= damage;
+            hp -= damage;
 
-        if (hp <= 0)
-        {
-            Destroy(gameObject);
-        }
+            if (hp <= 0)
+            {
+                Destroy(gameObject);
+            }
     }
 }
