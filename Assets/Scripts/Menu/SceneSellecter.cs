@@ -1,9 +1,13 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class SceneSellecter : MonoBehaviour
 {
+    public static List<Color> winners = new List<Color>();
+    public Image winnerPrefab;
+    public Transform winnerParent;
     public float timeToNext;
     public float fadeTime;
     public Image image;
@@ -12,6 +16,13 @@ public class SceneSellecter : MonoBehaviour
 
     void Start()
     {
+        while (winners.Count > 10) winners.RemoveAt(0);
+
+        foreach (Color color in winners)
+        {
+            Image winner = Instantiate(winnerPrefab, winnerParent);
+            winner.color = color;
+        }
         time = timeToNext;
         c = image.color;
     }

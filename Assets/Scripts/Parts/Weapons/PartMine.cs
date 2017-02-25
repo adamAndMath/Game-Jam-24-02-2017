@@ -24,6 +24,8 @@ public class PartMine : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
+        if (!animator) return;
+
         ArmingTimeLeft = ArmingTimeLeft - Time.deltaTime;
         if (ArmingTimeLeft <= 0)
         {

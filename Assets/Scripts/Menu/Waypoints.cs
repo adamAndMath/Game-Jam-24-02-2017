@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Waypoints : MonoBehaviour
 {
@@ -15,11 +16,16 @@ public class Waypoints : MonoBehaviour
     public GameObject[] countDown;
     public float time = 5;
 
-    private bool start;
     private List<int> avalable;
     private List<Player> players = new List<Player>();
     private float timer;
     private int id = -1;
+    private State state = State.Idle;
+
+    private enum State
+    {
+        Idle, Starting, Game, Ending
+    }
 
     void Awake()
     {
@@ -33,14 +39,50 @@ public class Waypoints : MonoBehaviour
 
     public void StartGame()
     {
-        start = true;
+        state = State.Starting;
         Update();
     }
 
     void Update()
     {
-        if (!start) return;
+        switch (state)
+        {
+            case State.Starting:
+                StartingGame();
+                break;
+            case State.Game:
+                for (int i = 0; i < players.Count; i++)
+                {
+                    if (players[i]) continue;
+                    players.RemoveAt(i--);
+                }
 
+                if (players.Count <= 1)
+                {
+                    timer = 3;
+                    state = State.Ending;
+                }
+                break;
+            case State.Ending:
+                for (int i = 0; i < players.Count; i++)
+                {
+                    if (players[i]) continue;
+                    players.RemoveAt(i--);
+                }
+
+                timer -= Time.deltaTime;
+
+                if (timer <= 0)
+                {
+                    SceneSellecter.winners.Add(players.Count == 0 ? new Color(0.5F, 0.5F, 0.5F, 1) : players[0].GetComponent<SpriteRenderer>().color);
+                    SceneManager.LoadScene(0);
+                }
+                break;
+        }
+    }
+
+    private void StartingGame()
+    {
         for (int i = 0; i < avalable.Count; i++)
         {
             if (!Input.GetButtonDown(avalable[i] + playerPrefab.pickUp)) continue;
@@ -64,7 +106,7 @@ public class Waypoints : MonoBehaviour
                     player.enabled = true;
                 }
 
-                Destroy(gameObject);
+                state = State.Game;
             }
         }
     }
