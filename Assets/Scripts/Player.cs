@@ -11,7 +11,6 @@ public class Player : MonoBehaviour
     public string vertical;
     public string weaponButton;
     public string pickUp;
-    public Transform weaponMount;
     [Space]
     [SerializeField]
     private PartMove partMove;
@@ -43,7 +42,7 @@ public class Player : MonoBehaviour
         {
             Destroy(weapon.gameObject);
             weapon = value;
-            value.transform.SetParent(weaponMount, false);
+            value.transform.SetParent(transform, false);
         }
     }
 
