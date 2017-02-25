@@ -27,10 +27,10 @@ public class PartRoundSaw : PartWeapon
 
             foreach (Collider2D hit in hits)
             {
-                Player plr = hit.GetComponent<Player>();
+                IDamageable damageable = hit.GetComponent<IDamageable>();
 
-                if (plr && plr != player)
-                    plr.Damage(damage*Time.deltaTime);
+                if (damageable != null && damageable != player)
+                    damageable.Damage(damage * Time.deltaTime);
             }
         }
         else
