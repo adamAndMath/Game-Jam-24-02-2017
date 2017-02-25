@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class PartMove : MonoBehaviour
+public class PartMove : PartBase
 {
     public float drag;
     public float acceleration;
