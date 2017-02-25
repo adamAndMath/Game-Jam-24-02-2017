@@ -9,7 +9,7 @@ public class PartLaser : PartWeapon
     public GameObject laser;
     private AudioSource audio;
 
-    public void Start()
+    public void Awake()
     {
         audio = GetComponent<AudioSource>();
     }

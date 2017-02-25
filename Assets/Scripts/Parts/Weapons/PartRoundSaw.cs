@@ -7,7 +7,7 @@ public class PartRoundSaw : PartWeapon
     public CircleCollider2D mesh;
     private Animator animator;
 
-    public void Start()
+    public void Awake()
     {
         animator = GetComponent<Animator>();
     }

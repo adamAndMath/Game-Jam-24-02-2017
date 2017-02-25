@@ -35,7 +35,7 @@ public class Player : MonoBehaviour, IDamageable
         get { return partMove; }
         set
         {
-            if (partMove) Destroy(partMove);
+            if (partMove) Destroy(partMove.gameObject);
             partMove = value;
             if (value) value.transform.SetParent(transform, false);
         }
@@ -103,6 +103,7 @@ public class Player : MonoBehaviour, IDamageable
 
     private void RotationWeapon(Vector2 movement)
     {
+        movement = transform.worldToLocalMatrix*movement;
         float angle = Mathf.Rad2Deg * Mathf.Atan2(-movement.x, movement.y);
         float rot = weapon.transform.localRotation.eulerAngles.z;
 
