@@ -21,7 +21,7 @@ public class Charger : MonoBehaviour
                 {
                     case BarType.Hp: player.hp = Mathf.Min(player.maxHp, player.hp + speed*Time.deltaTime);
                         break;
-                    case BarType.Energy: player.energy = Mathf.Min(player.maxEnergy, player.energy*Time.deltaTime);
+                    case BarType.Energy: player.energy = Mathf.Min(player.maxEnergy, player.energy + speed*Time.deltaTime);
                         break;
                     default:
                         throw new Exception();
