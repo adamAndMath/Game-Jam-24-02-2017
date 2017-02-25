@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212840968748616394}
   - component: {fileID: 61505176326930570}
   - component: {fileID: 249245549525846400}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Conveyor Effect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
