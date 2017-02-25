@@ -199,7 +199,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b4aa4ca7fd6c0340bdf3b9bc6f49bcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pickUp: {fileID: 114346183193692246, guid: 5b8491c7b8db118429ecd2b36dd10deb, type: 2}
+  pickUp: {fileID: 114336025500277920, guid: 5b8491c7b8db118429ecd2b36dd10deb, type: 2}
   drag: 40
   acceleration: 300
   rotationSpeed: 360
