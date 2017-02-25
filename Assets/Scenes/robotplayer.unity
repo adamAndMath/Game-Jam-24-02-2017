@@ -685,10 +685,10 @@ GameObject:
   m_PrefabInternal: {fileID: 127676602}
 --- !u!114 &1050196326 stripped
 MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114488690031405704, guid: 4bda3ebbf247a9c41829e50767386bd0,
+  m_PrefabParentObject: {fileID: 114451944612603158, guid: 4bda3ebbf247a9c41829e50767386bd0,
     type: 2}
   m_PrefabInternal: {fileID: 127676602}
-  m_Script: {fileID: 11500000, guid: a3926f5e6749a484e95a939308c32ac5, type: 3}
+  m_Script: {fileID: 11500000, guid: 0b4aa4ca7fd6c0340bdf3b9bc6f49bcc, type: 3}
 --- !u!95 &1050196327
 Animator:
   serializedVersion: 3
@@ -1319,10 +1319,10 @@ GameObject:
   m_PrefabInternal: {fileID: 795526037}
 --- !u!114 &2090737260 stripped
 MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114488690031405704, guid: 4bda3ebbf247a9c41829e50767386bd0,
+  m_PrefabParentObject: {fileID: 114451944612603158, guid: 4bda3ebbf247a9c41829e50767386bd0,
     type: 2}
   m_PrefabInternal: {fileID: 795526037}
-  m_Script: {fileID: 11500000, guid: a3926f5e6749a484e95a939308c32ac5, type: 3}
+  m_Script: {fileID: 11500000, guid: 0b4aa4ca7fd6c0340bdf3b9bc6f49bcc, type: 3}
 --- !u!82 &2090737264
 AudioSource:
   m_ObjectHideFlags: 0
