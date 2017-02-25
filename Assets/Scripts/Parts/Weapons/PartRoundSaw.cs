@@ -6,10 +6,11 @@ public class PartRoundSaw : PartWeapon
     public float energy = 0.1F;
     public CircleCollider2D mesh;
     private Animator animator;
-
+    private ParticleSystem particle;
     public void Start()
     {
         animator = GetComponent<Animator>();
+        particle = GetComponentInChildren<ParticleSystem>();
     }
 
     public override void UpdateWeapon(Player player)
@@ -29,8 +30,15 @@ public class PartRoundSaw : PartWeapon
                 IDamageable damageable = hit.GetComponent<IDamageable>();
 
                 if (damageable != null && damageable != player)
+                {
                     damageable.Damage(damage * Time.deltaTime);
+                    particle.Play();
+                }
             }
+        }
+        else
+        {
+            particle.Stop();
         }
     }
 }
