@@ -200,9 +200,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pickUp: {fileID: 114336025500277920, guid: 5b8491c7b8db118429ecd2b36dd10deb, type: 2}
-  drag: 40
-  acceleration: 300
-  rotationSpeed: 360
+  drag: 30
+  acceleration: 200
+  rotationSpeed: 270
   allowedDelta: 120
 --- !u!212 &212497500203205272
 SpriteRenderer:

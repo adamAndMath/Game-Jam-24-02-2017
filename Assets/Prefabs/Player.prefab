@@ -502,7 +502,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 1
-  maxHp: 5
+  maxHp: 25
   maxEnergy: 5
   rotationSpeed: 360
   horizontal: -Horizontal
@@ -541,7 +541,7 @@ ParticleSystem:
   m_GameObject: {fileID: 1986576599497430}
   serializedVersion: 5
   lengthInSec: 5
-  speed: 1
+  simulationSpeed: 1
   looping: 1
   prewarm: 1
   playOnAwake: 0

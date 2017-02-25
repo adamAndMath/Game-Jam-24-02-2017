@@ -134,7 +134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07185079e420ef84f97c05d745527783, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 60
+  damage: 10
   explotionRadius: 2
   force: 150
   time: 2
@@ -146,7 +146,7 @@ ParticleSystem:
   m_GameObject: {fileID: 1486858287835366}
   serializedVersion: 5
   lengthInSec: 5
-  speed: 1
+  simulationSpeed: 1
   looping: 0
   prewarm: 0
   playOnAwake: 1
