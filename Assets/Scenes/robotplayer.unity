@@ -740,6 +740,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1275387377 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114532577579521662, guid: 5ae494bf02410d84ea632e7320895493,
+    type: 2}
+  m_PrefabInternal: {fileID: 1919542083}
+  m_Script: {fileID: 11500000, guid: 49b25a3297320374eb3eac278cbb828b, type: 3}
 --- !u!1 &1348966484
 GameObject:
   m_ObjectHideFlags: 0
@@ -1239,7 +1245,7 @@ Prefab:
         type: 2}
       propertyPath: player
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1275387377}
     - target: {fileID: 224517650926141184, guid: 77578c8f590c0db43a50feced181774e,
         type: 2}
       propertyPath: m_AnchorMin.x
