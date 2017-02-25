@@ -120,8 +120,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 0
   maxHp: 5
+  rotationSpeed: 360
   horizontal: -Horizontal
   vertical: -Vertical
+  rotateHorizontal: -RotateX
+  rotateVertical: -RotateY
   weaponButton: -Weapon
   pickUp: -PickUp
   partMove: {fileID: 0}
