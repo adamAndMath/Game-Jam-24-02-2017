@@ -142,7 +142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9a8f7c5896e9454aba350324bcd90e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pickUp: {fileID: 0}
+  pickUp: {fileID: 114818537612871586, guid: dffe2184f4790dd49b3c92f57ed42cb9, type: 2}
   damage: 0.1
   width: 0.12
   maxLength: 20
@@ -155,7 +155,7 @@ ParticleSystem:
   m_GameObject: {fileID: 1117279225245780}
   serializedVersion: 5
   lengthInSec: 5
-  simulationSpeed: 1
+  speed: 1
   looping: 1
   prewarm: 0
   playOnAwake: 1

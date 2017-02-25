@@ -153,9 +153,12 @@ MonoBehaviour:
   horizontal: -Horizontal
   vertical: -Vertical
   weaponButton: -Weapon
+  pickUp: -PickUp
+  weaponMount: {fileID: 4827432622642312}
   partMove: {fileID: 0}
   weapon: {fileID: 0}
   hp: 0
+  col: {fileID: 0}
 --- !u!212 &212062826154002678
 SpriteRenderer:
   m_ObjectHideFlags: 1

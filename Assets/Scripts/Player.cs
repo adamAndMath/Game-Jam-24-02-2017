@@ -41,7 +41,7 @@ public class Player : MonoBehaviour
         get { return weapon; }
         set
         {
-            Destroy(weapon);
+            Destroy(weapon.gameObject);
             weapon = value;
             value.transform.SetParent(weaponMount, false);
         }

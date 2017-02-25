@@ -18,5 +18,7 @@ public class PickUpPart : MonoBehaviour
         else if (part is PartWeapon)
             player.PartWeapon = Instantiate((PartWeapon) part);
         else throw new Exception();
+
+        Destroy(this);
     }
 }
