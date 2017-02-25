@@ -20,9 +20,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4772661436177246}
   - component: {fileID: 212695015295442308}
-  - component: {fileID: 114889104157368028}
   - component: {fileID: 58777358051383316}
   - component: {fileID: 50846019504151974}
+  - component: {fileID: 114570920654946858}
+  - component: {fileID: 114498285875026394}
   m_Layer: 8
   m_Name: Pick Up 2-Wheel
   m_TagString: Untagged
@@ -77,7 +78,19 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.1
---- !u!114 &114889104157368028
+--- !u!114 &114498285875026394
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1094176084151040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c65a055e0d66bdc448267b1c46b57024, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 9100000, guid: d026f8ec7fa524f44b0d6fe7ab5e77ec, type: 2}
+--- !u!114 &114570920654946858
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -88,7 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 510836947ed7e0541bada0ef21d0e77f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  part: {fileID: 114451944612603158, guid: 4bda3ebbf247a9c41829e50767386bd0, type: 2}
+  part: {fileID: 114345773799336034, guid: 87b1e8eea8e9ab44b9f39808bd777d74, type: 2}
 --- !u!212 &212695015295442308
 SpriteRenderer:
   m_ObjectHideFlags: 1

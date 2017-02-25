@@ -20,7 +20,7 @@ public class Rocket : MonoBehaviour, IDamageable
 
         for (int i = 0; i < hits; i++)
         {
-            if (rayHits[i].collider.gameObject.layer == LayerMask.NameToLayer("Pick Up"))
+            if (((1 << rayHits[i].collider.gameObject.layer) & player.weaponIgnore) != 0)
                 continue;
 
             if (player != null && rayHits[i].collider.GetComponent<Player>() == player)

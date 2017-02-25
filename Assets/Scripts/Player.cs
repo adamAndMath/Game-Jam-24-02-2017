@@ -21,6 +21,7 @@ public class Player : MonoBehaviour, IDamageable
     [SerializeField]
     private PartWeapon weapon;
 
+    public LayerMask weaponIgnore;
     public float hp;
     public float energy;
 

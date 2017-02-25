@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4922817017775684}
   - component: {fileID: 212432851398189886}
   - component: {fileID: 114571132918046064}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Rocket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37,7 +37,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4810364451668920}
   - component: {fileID: 212473721782897032}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: standard_turner
   m_TagString: Untagged
   m_Icon: {fileID: 0}

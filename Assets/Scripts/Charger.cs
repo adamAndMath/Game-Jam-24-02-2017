@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class Charger : MonoBehaviour
 {
@@ -22,9 +23,9 @@ public class Charger : MonoBehaviour
                         break;
                     case BarType.Energy: player.energy = Mathf.Min(player.maxEnergy, player.energy*Time.deltaTime);
                         break;
+                    default:
+                        throw new Exception();
                 }
-
-                throw new Exception();
             }
         }
     }

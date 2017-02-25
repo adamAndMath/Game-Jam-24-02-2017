@@ -9,9 +9,9 @@ public class PickUpPart : MonoBehaviour
     {
         if (part is PartMove)
             Instantiate(player.PartMove.pickUp, transform.position, player.transform.rotation);
-        else if (part is PartWeapon)
-            Instantiate(player.PartWeapon.pickUp, transform.position, player.transform.rotation);
-        else throw new Exception();
+        else if (part is PartWeapon) {
+            if (player.PartWeapon) Instantiate(player.PartWeapon.pickUp, transform.position, player.transform.rotation);
+        } else throw new Exception();
 
         if (part is PartMove)
             player.PartMove = Instantiate((PartMove) part);
